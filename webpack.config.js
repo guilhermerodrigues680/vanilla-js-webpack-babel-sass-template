@@ -1,7 +1,11 @@
 const path = require('path');
+const CopyPlugin = require("copy-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: [ "./src/index.js" ],
+  // devtool: argv.mode === 'production' ? false : 'source-map',
+  devtool: 'source-map',
   output: {
     path: path.join(__dirname, "dist"),
     filename: "main.js"
@@ -35,5 +39,13 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     watchContentBase: true
-  }
+  },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new CopyPlugin({
+      patterns: [
+        { from: "./public", to: "." },
+      ],
+    }),
+  ],
 }
