@@ -1,4 +1,4 @@
-// import "../assets/styles/reset.css";
+import "../assets/styles/reset.css";
 
 import { saveAs } from 'file-saver';
 
