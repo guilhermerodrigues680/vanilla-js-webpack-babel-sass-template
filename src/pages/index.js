@@ -1,5 +1,5 @@
 import "../assets/styles/reset.css";
-import "../assets/styles/style.css";
+import "../assets/styles/common.scss";
 
 // https://stackoverflow.com/questions/53558916/babel-7-referenceerror-regeneratorruntime-is-not-defined
 import "core-js/stable";
@@ -16,9 +16,9 @@ document.querySelector("#app").innerHTML = "JS OK!";
 getYesNo()
 .then(res => {
   console.log(res);
-  writeInDOM(res.answer);
+  writeInDOM("API Res: " + res.answer);
 })
 .catch(error => {
-  console.error(JSON.stringify(error));
-  writeInDOM(res.answer);
+  console.error(error);
+  writeInDOM("API Erro: " + JSON.stringify(error));
 })
