@@ -1,8 +1,34 @@
-npm run dev-server
+# Template Vanilla JS (JavaScript puro) configurado com Webpack, Babel e SASS
+
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Template Vanilla JS (JavaScript puro) configurado com Webpack, Babel e SASS, dando suporte a pacotes do npm e ES Modules.
+
+Acesse aqui o demo: [guilhermerodrigues680.github.io/vanilla-js-webpack-babel-sass-template](https://guilhermerodrigues680.github.io/vanilla-js-webpack-babel-sass-template)
+
+## Configuração do projeto
+
+### Instalação de dependências
+
+```
+npm install
+```
+
+### Compila e configura hot-reloads para desenvolvimento
+
+```
+npm run serve
+```
+
+### Compila e minimiza para produção
+
+```
 npm run build
+```
+
 ## Referências
 
-<details open>
+<details>
 <summary>Referências</summary>
 <br>
 https://medium.com/a-beginners-guide-for-webpack-2/multi-page-applications-4ae2ebfabc37
