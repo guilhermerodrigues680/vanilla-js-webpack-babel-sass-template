@@ -10,7 +10,8 @@ module.exports = {
   },
   devtool: 'source-map',
   output: {
-    path: path.join(__dirname, "dist"),
+    // path: path.join(__dirname, "dist"),
+    path: path.join(__dirname, "docs"),
     filename: "js/[name].bundle.js"
   },
   mode: "development",
@@ -33,7 +34,8 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    // contentBase: path.join(__dirname, "dist"),
+    contentBase: path.join(__dirname, "docs"),
     watchContentBase: true
   },
   plugins: [
