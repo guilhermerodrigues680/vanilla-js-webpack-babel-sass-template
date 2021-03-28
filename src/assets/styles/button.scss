@@ -1,5 +1,7 @@
+@import "./app-color-palette.scss";
+
 .button {
-  background-color: #4CAF50;
+  background-color: $base-color-primary-2;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -8,4 +10,5 @@
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
+  appearance: none;
 }

@@ -1,0 +1,21 @@
+/*
+ * Colors CSS
+ * ----------------------------------------------------------------------------
+ * Cores base para o app
+*/
+
+@import "./colors.scss";
+
+// App Color Palette
+$base-color-primary: $color-blue-500;
+$base-color-primary-2: $color-blue-600;
+$base-color-primary-3: $color-blue-700;
+
+$base-color-secondary: $color-amber-400;
+$base-color-secondary-2: $color-amber-600;
+$base-color-secondary-3: $color-amber-800;
+
+$base-color-light: white;
+$base-color-smoke: $color-gray-50;
+$base-color-dark: black;
+$base-color-text: $color-gray-800;
