@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/*
+ * Colors CSS
+ * ----------------------------------------------------------------------------
+ * Cores base para o app
+*/
+/*
+ * Colors CSS
+ * ----------------------------------------------------------------------------
+ * Cores diversas
+ *
+ * Referências:
+ * https://www.materialpalette.com
+ * https://www.materialpalette.com/colors
+ * https://material.io
+ * https://material.io/design/color/the-color-system.html#tools-for-picking-colors
+ * https://tailwindcss.com
+ * https://tailwindcss.com/docs/background-color
+*/
+.button {
+  background-color: #1E88E5;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+
+/*# sourceMappingURL=about.css.map*/
