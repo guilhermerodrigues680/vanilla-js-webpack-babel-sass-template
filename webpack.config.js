@@ -3,11 +3,13 @@ const CopyPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
   entry: {
     index: "./src/pages/index.js",
     about: "./src/pages/about.js",
+    "vue-example": "./src/pages/vue-example/main.js",
   },
   devtool: 'source-map',
   output: {
@@ -18,6 +20,10 @@ module.exports = {
   mode: "development",
   module: {
     rules: [
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -48,6 +54,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({ filename: "css/[name].css" }),
+    new VueLoaderPlugin(),
     new CopyPlugin({
       patterns: [
         { from: "./public", to: "." }
@@ -69,7 +76,20 @@ module.exports = {
       filename: 'about.html',
       scriptLoading: 'blocking',
     }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      title: 'APP - Vue Example',
+      template: './src/html/vue-example.html',
+      chunks: ['vue-example'],
+      filename: 'vue-example.html',
+      scriptLoading: 'blocking',
+    }),
   ],
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    }
+  },
   optimization: {
     splitChunks: {
       chunks: 'all',
